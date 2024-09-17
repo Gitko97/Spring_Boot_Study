@@ -1,0 +1,16 @@
+{
+  "name": "xcvds",
+  "age": 20,
+  "cars": [
+    {
+      "name": "BMW",
+      "carNumber": "123456",
+      "type": "SUV"
+    },
+    {
+      "name": "Audi",
+      "carNumber": "123456",
+      "type": "SEDAN"
+    }
+  ]
+}
