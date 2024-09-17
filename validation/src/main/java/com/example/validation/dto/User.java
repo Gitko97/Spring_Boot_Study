@@ -3,7 +3,9 @@ package com.example.validation.dto;
 import com.example.validation.annotation.YearMonth;
 
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 public class User {
@@ -16,6 +18,10 @@ public class User {
 
     @Valid
     private List<Car> cars;
+
+    @Size(min = 6, max = 6)
+    @YearMonth(pattern = "yyyyMM")
+    private String reqYearMonth;
 
     public String getName() {
         return name;
@@ -41,12 +47,21 @@ public class User {
         this.cars = cars;
     }
 
+    public String getReqYearMonth() {
+        return reqYearMonth;
+    }
+
+    public void setReqYearMonth(String reqYearMonth) {
+        this.reqYearMonth = reqYearMonth;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", cars=" + cars +
+                ", reqYearMonth='" + reqYearMonth + '\'' +
                 '}';
     }
 }
