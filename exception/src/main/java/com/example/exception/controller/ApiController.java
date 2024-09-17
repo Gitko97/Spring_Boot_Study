@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 
 @RestController
 @RequestMapping("/api/user")
-@Validated
+@Validated // 하단 validator를 위해서!
 public class ApiController {
 
     @GetMapping("") // ?name=1234
