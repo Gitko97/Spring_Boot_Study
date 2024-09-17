@@ -1,6 +1,6 @@
 package com.example.hello.dto;
 
-public class UserRequest {
+public class GetRequestDto {
 
     private String name;
     private int age;

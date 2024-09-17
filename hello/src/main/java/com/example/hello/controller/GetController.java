@@ -1,13 +1,13 @@
 package com.example.hello.controller;
 
-import com.example.hello.dto.UserRequest;
+import com.example.hello.dto.GetRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api/get")
-public class GetApiController {
+public class GetController {
 
     @GetMapping(path = "/hello")
     public String getHello(){
@@ -34,8 +34,8 @@ public class GetApiController {
         return sb.toString();
     }
     @GetMapping("/query-param3")
-    public String queryParam3(UserRequest userRequest){
-        System.out.println(userRequest);
-        return userRequest.toString();
+    public String queryParam3(GetRequestDto getRequestDto){
+        System.out.println(getRequestDto);
+        return getRequestDto.toString();
     }
 }
